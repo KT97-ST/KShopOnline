@@ -26,6 +26,7 @@ namespace KShopOnline.Areas.Admin.Controllers
         }
 
         // GET: Admin/Category/Create
+        [HttpGet]
         public ActionResult Create()
         {
             return View();
@@ -33,6 +34,7 @@ namespace KShopOnline.Areas.Admin.Controllers
 
         // POST: Admin/Category/Create
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(Category category)
         {
             try
@@ -41,7 +43,18 @@ namespace KShopOnline.Areas.Admin.Controllers
                 {
                     // TODO: Add insert logic here
 
-                    return RedirectToAction("Index");
+                    var model = new CategoryModel();
+                    int res = model.Create(category.Name, category.Alias, category.ParentID, category.Order, category.Status);
+                    if (res > 0)
+                    {
+                        return RedirectToAction("Index");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Them  moi khong thanh cong");
+                    }
+
+                    
                 }
                 return View();
             }

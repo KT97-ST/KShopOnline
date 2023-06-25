@@ -21,5 +21,21 @@ namespace Models
             var listCategory = context.Database.SqlQuery<Category>("Sp_Category_ListAll").ToList();
             return listCategory;
         }
+
+        public int Create(string name, string alias, int? parentId, int? order, bool? status)
+        {
+            var parameters = new object[]
+            {
+                new SqlParameter("@Name", name),
+                new SqlParameter("@Alias", alias),
+                new SqlParameter("@ParentID", parentId),
+                new SqlParameter("@Order", order),
+                new SqlParameter("@Status", status)
+            };
+
+            int res = context.Database.ExecuteSqlCommand("Sq_Categoty_Insert @Name,@Alias,@ParentID,@Order,@Status", parameters);
+            return res;
+        }
+
     }
 }
