@@ -4,10 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Models;
+using Models.Framework;
 
 namespace KShopOnline.Areas.Admin.Controllers
 {
-    [Authorize]
+   
     public class CategoryController : Controller
     {
         // GET: Admin/Category
@@ -32,13 +33,17 @@ namespace KShopOnline.Areas.Admin.Controllers
 
         // POST: Admin/Category/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Category category)
         {
             try
             {
-                // TODO: Add insert logic here
+                if (ModelState.IsValid)
+                {
+                    // TODO: Add insert logic here
 
-                return RedirectToAction("Index");
+                    return RedirectToAction("Index");
+                }
+                return View();
             }
             catch
             {
