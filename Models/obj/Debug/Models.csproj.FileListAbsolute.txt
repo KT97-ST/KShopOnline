@@ -1,0 +1,12 @@
+E:\Code\ASP_NET\KShop\KShopOnline\Models\bin\Debug\Models.dll.config
+E:\Code\ASP_NET\KShop\KShopOnline\Models\bin\Debug\Models.dll
+E:\Code\ASP_NET\KShop\KShopOnline\Models\bin\Debug\Models.pdb
+E:\Code\ASP_NET\KShop\KShopOnline\Models\bin\Debug\EntityFramework.dll
+E:\Code\ASP_NET\KShop\KShopOnline\Models\bin\Debug\EntityFramework.SqlServer.dll
+E:\Code\ASP_NET\KShop\KShopOnline\Models\bin\Debug\EntityFramework.xml
+E:\Code\ASP_NET\KShop\KShopOnline\Models\bin\Debug\EntityFramework.SqlServer.xml
+E:\Code\ASP_NET\KShop\KShopOnline\Models\obj\Debug\Models.csproj.AssemblyReference.cache
+E:\Code\ASP_NET\KShop\KShopOnline\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+E:\Code\ASP_NET\KShop\KShopOnline\Models\obj\Debug\Models.csproj.CopyComplete
+E:\Code\ASP_NET\KShop\KShopOnline\Models\obj\Debug\Models.dll
+E:\Code\ASP_NET\KShop\KShopOnline\Models\obj\Debug\Models.pdb
